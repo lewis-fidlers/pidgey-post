@@ -1,13 +1,37 @@
-<div class="card">
-  <div class="card-block">
-    <h1>Chat room</h1>
-    <div id="messages">
-      <%= render @messages %>
+<div class="col-sm-8">
+  <div class="card">
+    <div class="card-block">
+      <h1>Chat room</h1>
+      <div id="messages">
+        <%= render @messages %>
+      </div>
+      <form>
+        <label>Say something:</label>
+        <br>
+        <input type="text" data-behavior="room_speaker">
+      </form>
     </div>
-    <form>
-      <label>Say something:</label>
-      <br>
-      <input type="text" data-behavior="room_speaker">
-    </form>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="card">
+    <div class="card-header">
+      <h4>Users in this room</h4>
+    </div>
+    <div class="card-block">
+      <div id="users">
+        <ul class="user-list">
+          <li>
+            Lewis
+          </li>
+          <li>
+            Piet
+          </li>
+          <li>
+            Bob
+          </li>
+        </ul>
+      </div>
+    </div>
   </div>
 </div>

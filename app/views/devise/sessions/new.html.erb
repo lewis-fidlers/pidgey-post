@@ -1,6 +1,8 @@
 <div class="card">
-  <div class="card-block">
-    <h4 class="card-title"><%= t('.sign_in', :default => "Sign in") %></h4>
+    <div class="card-header">
+      <h4><%= t('.sign_in', :default => "Sign in") %></h4>
+    </div>
+    <div class="card-block">
     <%= form_for(resource, as: resource_name, url: session_path(resource_name), html: { role: "form" }) do |f| %>
       <div class="form-group">
         <%= f.label :email %>

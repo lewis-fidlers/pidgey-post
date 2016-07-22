@@ -1,4 +1,5 @@
 <%# A variable message should be available here. %>
-<p class="message">
+<p class="message bubble-right">
   <%= message.content %>
+  <%= message.user.email if message.user.present? %>
 </p>

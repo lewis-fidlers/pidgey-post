@@ -1,3 +1,133 @@
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+.user-info {
+  color: #CFCFCF;
+  font-size: 10px;
+}
+.bubble-right
+{
+  position: relative;
+  width: 250px;
+  height: auto;
+  padding: 0px;
+  background: #B5FFFF;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: #00000 solid 1px;
+}
+
+.bubble-right:after
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent #B5FFFF;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-top: -12px;
+  right: -20px;
+  top: 39%;
+}
+
+.bubble-right:before
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent #FFF;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-top: -12px;
+  right: -21px;
+  top: 39%;
+}
+
+.bubble-left
+{
+  position: relative;
+  width: 250px;
+  height: auto;
+  padding: 0px;
+  background: #B5FFFF;
+  -webkit-border-radius: 8px;
+  -moz-border-radius: 8px;
+  border-radius: 8px;
+  border: #FFF solid 1px;
+}
+
+.bubble-right:after
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent #B5FFFF;
+  display: block;
+  width: 0;
+  z-index: 1;
+  margin-top: -12px;
+  right: -20px;
+  top: 39%;
+}
+
+.bubble-right:before
+{
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 12px 0 12px 20px;
+  border-color: transparent #FFF;
+  display: block;
+  width: 0;
+  z-index: 0;
+  margin-top: -12px;
+  right: -21px;
+  top: 39%;
+}
+
+.bubble-left
+{
+position: relative;
+width: 250px;
+height: auto;
+padding: 0px;
+background: #00A6CD;
+-webkit-border-radius: 10px;
+-moz-border-radius: 10px;
+border-radius: 10px;
+border: #FFF solid 1px;
+}
+
+.bubble-left:after
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 15px 0;
+border-color: transparent #00A6CD;
+display: block;
+width: 0;
+z-index: 1;
+left: -15px;
+top: 14px;
+}
+
+.bubble-left:before
+{
+content: '';
+position: absolute;
+border-style: solid;
+border-width: 15px 15px 15px 0;
+border-color: transparent #FFF;
+display: block;
+width: 0;
+z-index: 0;
+left: -16px;
+top: 14px;
+}

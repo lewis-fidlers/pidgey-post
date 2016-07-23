@@ -1,5 +1,12 @@
 <%# A variable message should be available here. %>
-<p class="message bubble-right">
-  <%= message.content %>
-  <%= message.user.email if message.user.present? %>
-</p>
+<% bubbleclass = current_user == message.user ? "bubble-right pull-lg-right" : "bubble-left pull-lg-left" %>
+<div class="message clearfix m-b-1 <%= bubbleclass %>">
+  <p class="m-l-1 m-t-1 m-r-1">
+    <%= message.content %>
+  </p>
+  <span class="user-info m-l-1 m-t-1 m-r-1">
+    <%= message.user.email if message.user.present? %>
+     - <%= message.created_at.strftime("%d/%m/%Y - %I:%M%p") %>
+  </span>
+</div>
+<span class="clearfix"></span>

@@ -6,9 +6,9 @@
         <%= render @messages %>
       </div>
       <form>
-        <label>Say something:</label>
-        <br>
-        <input type="text" data-behavior="room_speaker">
+        <fieldset class="form-group">
+          <textarea id="message-input" class="form-control" rows="3" type="text" data-behavior="room_speaker"></textarea>
+        </fieldset>
       </form>
     </div>
   </div>

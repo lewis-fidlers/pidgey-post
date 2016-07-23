@@ -1,6 +1,10 @@
 // Place all the styles related to the rooms controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+#messages{
+  height: 500px;
+  overflow: auto;
+}
 .user-info {
   color: #CFCFCF;
   font-size: 10px;
@@ -61,7 +65,7 @@
   border: #FFF solid 1px;
 }
 
-.bubble-right:after
+.bubble-left:after
 {
   content: '';
   position: absolute;
@@ -76,7 +80,7 @@
   top: 39%;
 }
 
-.bubble-right:before
+.bubble-left:before
 {
   content: '';
   position: absolute;

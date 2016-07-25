@@ -1,9 +1,13 @@
-<% bubbleclass = "bubble-right pull-lg-right" %>
+<% if @active_user.present? %>
+  <% bubbleclass = @active_user.email == message.user.email ? "bubble-right pull-sm-right" : "bubble-left pull-sm-left" %>
+<% else %>
+  <% bubbleclass = "" %>
+<% end %>
 <div class="message clearfix m-b-1 <%= bubbleclass %>">
   <p class="m-l-1 m-t-1 m-r-1">
     <%= message.content %>
   </p>
-  <span class="user-info m-l-1 m-t-1 m-r-1">
+  <span class="user-info m-l-1 m-t-1 m-r-1" data-user-email="<%= message.user.email %>">
     <%= message.user.email if message.user.present? %>
      - <%= message.created_at.strftime("%d/%m/%Y - %I:%M%p") %>
   </span>

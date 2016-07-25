@@ -1,6 +1,7 @@
 <div class="col-sm-8">
   <div class="card">
     <div class="card-block">
+      <span class="hidden" id="user_email" data-user-email="<%= current_user.email %>"></span>
       <div id="messages">
         <%= render @messages %>
       </div>

@@ -11,4 +11,12 @@ class RoomChannel < ApplicationCable::Channel
   def speak(data)
     current_user.messages.create! content: data["message"]
   end
+
+  def user_is_typing(data)
+    ActionCable.server.broadcast "room_channel", user: data["message"], action: "started_typing"
+  end
+
+  def user_stopped_typing(data)
+    ActionCable.server.broadcast "room_channel", user: data["message"], action: "stopped_typing"
+  end
 end

@@ -6,6 +6,7 @@
         <%= render @messages %>
       </div>
       <form>
+        <span id="typing-info"></span>
         <fieldset class="form-group">
           <textarea id="message-input" class="form-control" rows="3" type="text" data-behavior="room_speaker"></textarea>
         </fieldset>
@@ -15,13 +16,12 @@
 </div>
 <div class="col-sm-4">
   <div class="card">
-    <div class="pidgey-logo center-block">
-      <%= image_tag("pidgey-post.jpeg") %>
+    <div class="card-block pidgey-logo img-fluid">
     </div>
   </div>
   <div class="card">
     <div class="card-header">
-      <h4>Users in this room</h4>
+      <h4>Users in this room(dummy data for now)</h4>
     </div>
     <div class="card-block">
       <div id="users">

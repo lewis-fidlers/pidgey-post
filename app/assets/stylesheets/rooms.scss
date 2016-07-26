@@ -5,6 +5,11 @@
   height: 500px;
   overflow: auto;
 }
+.pidgey-logo {
+  min-height: 250px;
+  background-image: image-url("pidgey-post.jpg");
+  background-size: cover;
+}
 .user-info {
   color: #CFCFCF;
   font-size: 10px;

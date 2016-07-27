@@ -1,8 +1,8 @@
 $(document).on 'turbolinks:load', ->
-  userId = $('#user_email').data('userId')
+  roomId = $('#room_id').data('roomId')
   App.room = App.cable.subscriptions.create {
       channel: "RoomChannel"
-      room: userId
+      room: roomId
     },
     connected: ->
 

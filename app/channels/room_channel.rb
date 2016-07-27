@@ -9,14 +9,15 @@ class RoomChannel < ApplicationCable::Channel
   end
 
   def speak(data)
-    current_user.messages.create! content: data["message"]
+    Rails.logger.info "#{current_user.email} spoke in room #{params[:room]}"
+    current_user.messages.create! content: data["message"], client_id: params[:room]
   end
 
   def user_is_typing(data)
-    ActionCable.server.broadcast "room_chr{current_user}", user: data["message"], action: "started_typing"
+    ActionCable.server.broadcast "room_channel_#{params[:room]}", user: data["message"], action: "started_typing"
   end
 
   def user_stopped_typing(data)
-    ActionCable.server.broadcast "room_channel_#{current_user}", user: data["message"], action: "stopped_typing"
+    ActionCable.server.broadcast "room_channel_#{params[:room]}", user: data["message"], action: "stopped_typing"
   end
 end

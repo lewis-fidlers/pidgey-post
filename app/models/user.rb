@@ -5,4 +5,12 @@ class User < ApplicationRecord
          :recoverable, :rememberable, :trackable, :validatable
 
   has_many :messages
+
+  def client?
+    role == "client"
+  end
+
+  def guide?
+    role == "guide"
+  end
 end

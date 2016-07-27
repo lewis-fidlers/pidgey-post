@@ -1,0 +1,6 @@
+<% @users.each do |user| %>
+    <tr class="user-row" data-href="/rooms/<%= user.id %>">
+      <td><%= user.id %></td>
+      <td><%= link_to user.email, "/rooms/#{user.id}"  %></td>
+    </tr>
+<% end %>

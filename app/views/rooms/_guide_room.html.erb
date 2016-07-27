@@ -1,0 +1,35 @@
+<div class="col-sm-8">
+  <div class="card">
+    <div class="card-block">
+      <span class="hidden" id="user_email" data-user-email="<%= current_user.email %>"</span>
+      <span class="hidden" id="room_id" data-room-id="<%= @room_id %>"></span>
+      <div id="messages">
+        <%= render @messages %>
+      </div>
+      <form>
+        <span id="typing-info"></span>
+        <fieldset class="form-group">
+          <textarea id="message-input" class="form-control" rows="3" type="text" data-behavior="room_speaker"></textarea>
+        </fieldset>
+      </form>
+    </div>
+  </div>
+</div>
+<div class="col-sm-4">
+  <div class="card">
+    <div class="card-block pidgey-logo img-fluid">
+    </div>
+  </div>
+  <div class="card">
+    <div class="card-header">
+      <h4>Users in this room(dummy data for now)</h4>
+    </div>
+    <div class="card-block">
+      <div id="users">
+        <ul class="user-list">
+        </ul>
+      </div>
+    </div>
+  </div>
+</div>
+

@@ -1,0 +1,14 @@
+<div class="col-sm-8">
+  <span class="hidden" id="user_email" data-user-email="<%= current_user.email %>" data-user-id="<%= current_user.id %>"></span>
+  <div id="clients">
+    <table class="table table-inverse">
+      <thead>
+        <tr>
+          <th>#</th>
+          <th>Email</th>
+        </tr>
+      </thead>
+      <%= render partial: "users" %>
+    </table>
+  </div>
+</div>
